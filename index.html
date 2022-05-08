@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Emirates</title>
+	</head>
+	<script src="works.js"></script>
+	<body>
+		<div class="section" id="main">
+			<div class="main-text">
+				<h1>MAKE NEW MEMORIES!</h1>
+				<!-- <h2>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Provident animi sit tenetur. Tempore eaque assumenda facere
+					eius laborum veniam iusto.
+				</h2> -->
+				<h2>Explore new possibilities with our curated selection of stays, and tourist attractions.</h2>
+				<a href="#cities" onclick="createTravelFlights()">
+					<button id="main-cta" style="width: auto">
+						<p>find your destination</p>
+					</button>
+				</a>
+			</div>
+		</div>
+
+		<div class="section" id="cities">
+			<div class="top-bar">
+				<a href="#main">
+					<button class="backBtn">
+						<img src="./back.png" />
+						<p>Back</p>
+					</button>
+				</a>
+				<div class="page-indicators">
+					<img src="./radio-selected.png" />
+					<img src="./radio-unselected.png" />
+					<img src="./radio-unselected.png" />
+					<img src="./radio-unselected.png" />
+					<img src="./radio-unselected.png" />
+				</div>
+				<h2>Destination</h2>
+			</div>
+			<div class="cards">
+				<div class="card">
+					<div class="city-info">
+						<img
+							src="./barcelona-thumbnail.jpg"
+							class="city-thumbnail"
+						/>
+						<div
+							class="city-name"
+							style="display: flex; align-items: center"
+						>
+							<img
+								src="./es.svg"
+								style="height: 30px; margin: 20px"
+							/>
+							<h2 style="font-size: 30px">Barcelona</h2>
+						</div>
+						<p class="city-description">
+							Catalonia's vibrant capital, Barcelona is a stunning
+							seaside city that flaunts her beauty and sunny
+							lifestyle.
+						</p>
+					</div>
+					<a
+						href="#departure"
+						style="
+							width: 100%;
+							display: flex;
+							justify-content: center;
+						"
+					>
+						<button
+							class="view-city"
+							onclick="selectDestination('BAR')"
+							id="barcaBtn"
+							style="width: 100%"
+						>
+							Select
+						</button>
+					</a>
+				</div>
+				<!--  -->
+				<div class="card">
+					<div class="city-info">
+						<img
+							src="./kiyv-thumbnail.jpg"
+							class="city-thumbnail"
+						/>
+						<div
+							class="city-name"
+							style="display: flex; align-items: center"
+						>
+							<img
+								src="./ua.svg"
+								style="height: 30px; margin: 20px"
+							/>
+							<h2 style="font-size: 30px">Kyiv</h2>
+						</div>
+						<p class="city-description">
+							There are so many reasons to visit Kyiv, from
+							amazing architecture to interesting history and
+							vibrant atmosphere and each of them is already a
+							good excuse to plan the trip to the capital of
+							Ukraine.
+						</p>
+					</div>
+					<a
+						href="#departure"
+						style="
+							width: 100%;
+							display: flex;
+							justify-content: center;
+						"
+					>
+						<button
+							class="view-city"
+							onclick="selectDestination('KYV')"
+							id="kyivBtn"
+							style="width: 100%"
+						>
+							Select
+						</button>
+					</a>
+				</div>
+				<div class="card">
+					<div class="city-info">
+						<img
+							src="./marrakech-thumbnailjpg.webp"
+							class="city-thumbnail"
+						/>
+						<div
+							class="city-name"
+							style="display: flex; align-items: center"
+						>
+							<img
+								src="./ma.svg"
+								style="height: 30px; margin: 20px"
+							/>
+							<h2 style="font-size: 30px">Marrakech</h2>
+						</div>
+						<p class="city-description">
+							Explore the Magical Red City. Colorful souks,
+							Moorish architecture, intimate gardens and boutique
+							hotels.
+						</p>
+					</div>
+					<a
+						href="#departure"
+						style="
+							width: 100%;
+							display: flex;
+							justify-content: center;
+						"
+					>
+						<button
+							class="view-city"
+							onclick="selectDestination('MRK')"
+							id="marrakechBtn"
+							style="width: 100%"
+						>
+							Select
+						</button>
+					</a>
+				</div>
+				<div class="card">
+					<div class="city-info">
+						<img
+							src="./tokyo-thumbnail.jpg"
+							class="city-thumbnail"
+						/>
+						<div
+							class="city-name"
+							style="display: flex; align-items: center"
+						>
+							<img
+								src="./jp.svg"
+								style="height: 30px; margin: 20px"
+							/>
+							<h2 style="font-size: 30px">Tokyo</h2>
+						</div>
+						<p class="city-description">
+							It's full of nightlife, culture, amazing temples and
+							shrines and shopping, weird things to see and do. It
+							is is also a tourist friendly place and easy to get
+							around.
+						</p>
+					</div>
+					<a
+						href="#departure"
+						style="
+							width: 100%;
+							display: flex;
+							justify-content: center;
+						"
+					>
+						<button
+							class="view-city"
+							onclick="selectDestination('TKO')"
+							id="barcaBtn"
+							style="width: 100%"
+						>
+							Select
+						</button>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="section" id="departure">
+			<div class="top-bar">
+				<a href="#cities">
+					<button class="backBtn">
+						<img src="./back.png" />
+						<p>Back</p>
+					</button>
+				</a>
+				<div class="page-indicators">
+					<img src="./radio-unselected.png" />
+					<img src="./radio-selected.png" />
+					<img src="./radio-unselected.png" />
+					<img src="./radio-unselected.png" />
+					<img src="./radio-unselected.png" />
+				</div>
+				<h2>Departure</h2>
+			</div>
+			<div class="flights" id="travel"></div>
+		</div>
+		<div class="section" id="returnSection">
+			<div class="top-bar">
+				<a href="#departure">
+					<button class="backBtn">
+						<img src="./back.png" />
+						<p>Back</p>
+					</button>
+				</a>
+				<div class="page-indicators">
+					<img src="./radio-unselected.png" />
+					<img src="./radio-unselected.png" />
+					<img src="./radio-selected.png" />
+					<img src="./radio-unselected.png" />
+					<img src="./radio-unselected.png" />
+				</div>
+				<!-- <a href="#main">
+					<button class="backBtn">
+						<p>Next</p>
+						<img src="./back.png" style="transform: scale(-1)" />
+					</button>
+				</a> -->
+				<h2>Return</h2>
+			</div>
+			<div class="flights" id="return"></div>
+		</div>
+
+		<div class="section" id="program">
+			<div class="top-bar">
+				<a href="#returnSection">
+					<button class="backBtn">
+						<img src="./back.png" />
+						<p>Back</p>
+					</button>
+				</a>
+				<div class="page-indicators">
+					<img src="./radio-unselected.png" />
+					<img src="./radio-unselected.png" />
+					<img src="./radio-unselected.png" />
+					<img src="./radio-selected.png" />
+					<img src="./radio-unselected.png" />
+				</div>
+				<h2>Program</h2>
+			</div>
+
+			<div
+				class="programs"
+				style="display: flex; justify-content: space-between; padding-top: 100px;"
+			>
+				<div class="program-card">
+					<div
+						class="program-img"
+						style="background-image: url(./images/Four\ Seasons.jpg)"
+					></div>
+					<div class="program-text">
+						<h2>Four Seasons</h2>
+						<a
+							href="#summary"
+							onclick="selectProgram('Four Seasons')"
+						>
+							<button style="height: 10px">Pick</button>
+						</a>
+					</div>
+				</div>
+				<div class="program-card">
+					<div
+						class="program-img"
+						style="background-image: url(./images/MovenPick.jpg)"
+					></div>
+					<div class="program-text">
+						<h2>MovenPick</h2>
+						<a href="#summary" onclick="selectProgram('MovenPick')">
+							<button style="height: 10px">Pick</button>
+						</a>
+					</div>
+				</div>
+				<div class="program-card">
+					<div
+						class="program-img"
+						style="background-image: url(./images/Hilton.jpg)"
+					></div>
+					<div class="program-text">
+						<h2>Hilton</h2>
+						<a
+							href="#summary"
+							onclick="selectProgram('Hilton')"
+						>
+							<button style="height: 10px">Pick</button>
+						</a>
+					</div>
+				</div>
+				<div class="program-card">
+					<div
+						class="program-img"
+						style="background-image: url(./images/Holidy\ Inn.jpg)"
+					></div>
+					<div class="program-text">
+						<h2>Holidy Inn</h2>
+						<a href="#summary" onclick="selectProgram('Holidy Inn')">
+							<button style="height: 10px">Pick</button>
+						</a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="section" id="summary">
+			<div class="top-bar">
+				<a href="#program">
+					<button class="backBtn">
+						<img src="./back.png" />
+						<p>Back</p>
+					</button>
+				</a>
+				<div class="page-indicators">
+					<img src="./radio-unselected.png" />
+					<img src="./radio-unselected.png" />
+					<img src="./radio-unselected.png" />
+					<img src="./radio-unselected.png" />
+					<img src="./radio-selected.png" />
+				</div>
+				<h2>Summary</h2>
+			</div>
+			<div
+				class="summary-content"
+				id="summary-content"
+				style="padding: 0px"
+			>
+				<div class="summary-card">
+					<div class="summary-sentence">
+						<h2>
+							Your
+							<span id="selected-program">Honeymoon</span>
+							trip to 
+							<span class="dest-name">Damascus</span>
+							will be aboard the following flights:
+						</h2>
+					</div>
+					<div class="flight-summary row">
+						<div class="row">
+							<div class="trip-time">
+								<h2 id="travel-depart" style="margin:0;">00.00</h2>
+								<h2 style="margin: 0">DAM</h2>
+							</div>
+							<img src="./back.png" style="transform: scaleX(-1); height: 40px; margin: 0px 15px;">
+							<div class="trip-time">
+								<h2 id="travel-arrive" style="margin:0;">00.00</h2>
+								<h2 class="dest-code" style="margin: 0">DAM</h2>
+							</div>
+						</div>
+						<h2 id="travel-date">01/01/2022</h2>
+						<div id="travel-flight-logo" class="summary-logo"></div>
+                    </div>
+					<div class="flight-summary row">
+						<div class="row">
+							<div class="trip-time">
+								<h2 id="return-depart" style="margin:0;">00.00</h2>
+								<h2 class="dest-code" style="margin: 0">DAM</h2>
+							</div>
+							<img src="./back.png" style="transform: scaleX(-1); height: 40px; margin: 0px 15px;">
+							<div class="trip-time">
+								<h2 id="return-arrive" style="margin:0;">00.00</h2>
+								<h2 style="margin: 0">DAM</h2>
+							</div>
+						</div>
+						<h2 id="return-date">01/01/2022</h2>
+						<div id="return-flight-logo" class="summary-logo"></div>
+                    </div>
+					<a href="#main"><button>Home</button></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
